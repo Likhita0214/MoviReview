@@ -1,0 +1,53 @@
+{%load static%}
+<html>
+	<head>
+		<title> Movie Review </title>
+		<link rel="stylesheet" href="{%static 'css/styling.css'%}">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="shortcut icon" href="{%static 'images/logo.png' %}">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;1,400;1,500&display=swap" rel="stylesheet">
+	</head>
+	<body>
+		<nav>
+			<a href="#" class="logo"> <img src="{%static 'images/logo.png'%}"/> </a>
+			<ul class="menu">
+				<li> <a href="{%url 'home'%}"> Home </a> </li>
+				<li> <a href="{% url 'movies'%}">Movies </a> </li>
+				<li> <a href="{% url 'shortfilms'%}">ShortFilms </a> </li>
+				<li> <a href="{% url 'genres'%}"> Genres</a> </li>
+				<li> <a href="{% url 'about'%}"> About Us</a> </li>
+			</ul>
+			<div class="search">
+				<form action="{% url 'search-movies' %}" method="get"></form>
+				<input type="text" id="input" placeholder="Search for favorite films" onkeyup="fun()"/>
+				<button type="submit" style="border:none;background:transparent;"><i class="fa fa-search" style="font-size:20px;color:black"></i></button>
+				</form>
+			</div>
+		</nav>
+		<div class="g" >
+
+				<h2> GENRES </h2>
+				<br>
+				<hr>
+				<br>
+				<a href="{% url 'action'%}"> <img src="{%static 'images/action.png'%}" height="200" width="200"> </a>
+				<a href="{% url 'horror'%}"> <img src="{%static 'images/horror-genre.jpg'%}" height="200" width="200"> </a>
+				<a href="{% url 'comedy'%}"> <img src="{%static 'images/comedy.png'%}" height="200" width="200"> </a>
+				<a href="#"> <img src="{%static 'images/scifi.png'%}" height="200" width="200"> </a>
+				<a href="{% url 'drama'%}"> <img src="{%static 'images/drama.png'%}" height="200" width="200"> </a>
+				<a href="#"> <img src="{%static 'images/kids.png'%}" height="200" width="200"> </a>
+
+
+		</div>
+
+			<div class="f1">
+				<p style="font-size:20px"> Connect Us Here<br>
+				<a href="http://www.youtube.com" target="_blank"class="fa fa-youtube" ></a>
+				 <a href="http://www.facebook.com" class="fa fa-facebook" ></a>
+				 <a href="http://www.instagram.com" class="fa fa-instagram" ></a><p>
+				<h3> &copy All the reviews are subject to copyright </h3>
+			</div>
+	</body>
+</html>

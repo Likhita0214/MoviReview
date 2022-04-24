@@ -1,0 +1,133 @@
+{% load static %}
+<html>
+	<head>
+		<title> Movie Review </title>
+		<link rel="stylesheet" href="{%static 'css/styling.css' %}">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="shortcut icon" href="{%static 'images/logo.png' %}">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;1,400;1,500&display=swap" rel="stylesheet">
+	</head>
+	<body>
+		<nav>
+			<a href="#" class="logo"> <img src="{%static 'images/logo.png'%}"/> </a>
+			<ul class="menu">
+				<li> <a href="{% url 'home'%}"> Home </a> </li>
+				<li> <a href="{% url 'movies'%}">Movies </a> </li>
+				<li> <a href="{% url 'shortfilms'%}">ShortFilms </a> </li>
+				<li> <a href="{% url 'genres' %}"> Genres</a> </li>
+				<li> <a href="{%url 'about'%}"> About Us</a> </li>
+			</ul>
+			<div class="search">
+				<form action="{% url 'search-movies' %}" method="get"></form>
+				<input type="text" id="input" placeholder="Search for favorite films" onkeyup="fun()"/>
+				<button type="submit" style="border:none;background:transparent;"><i class="fa fa-search" style="font-size:20px;color:black"></i></button>
+				</form>
+			</div>
+		</nav>
+		<div class="m1">
+			<h2> Movies </h2>
+			<br>
+			<hr>
+			<br>
+			<table>
+				<tr> 
+					<td> <img src="{%static 'images/movie.png'%}" height="200" width="200"> </td>
+					<td>
+					<td>
+					<td style="background-color:black;color:white;text-align:center;font-style:bold;"> <img src="{%static 'images/mosagallu.jpg'%}" height="200" width="250">
+					<br> <br> <span style="font-size:20px;align:left;color:006666;">Movie :</span> MOSAGALLU <br>
+					<span style="font-size:20px;align:left;color:006666;">Cast :</span> Manchu vishnu,Kajal <br>
+					<span style="font-size:20px;align:left;color:006666;">Language :</span> Telugu
+						<br> <a href="#" style="text-decoration:None;color:yellow;"> Read the review </a> 
+					</td>
+					<td>
+					<td>
+					<td>
+					<td>
+					<td style="background-color:black;color:white;text-align:center;font-style:bold;"> <img src="{%static 'images/janatha.jpg'%}" height="250" width="200">
+					<br> <br> <span style="font-size:20px;align:left;color:006666;">Movie :</span> JANATHA GARAGE <br>
+					<span style="font-size:20px;align:left;color:006666;">Cast :</span> Jr.NTR,Mohan Lal,<br>Samantha,Nitya Menon <br>
+					<span style="font-size:20px;align:left;color:006666;">Languages :</span> Telugu,Tamil,<br>Malayalam
+						<br> <a href="{%url 'janatha'%}" style="text-decoration:None;color:yellow;"> Read the review </a>
+					</td>
+					<td>
+					<td>
+					<td>
+					<td>
+					<td style="background-color:black;color:white;text-align:center;font-style:bold;"> <img src="{%static 'images/AV.jpg'%}" height="200" width="200">
+					<br> <br> <span style="font-size:20px;align:left;color:006666;">Movie :</span> ALA VAIKUNTAPURAMLO <br>
+					<span style="font-size:20px;align:left;color:006666;">Cast :</span> Allu Arjun,Tabu,Pooja Hegde <br>
+					<span style="font-size:20px;align:left;color:006666;">Language :</span> Telugu
+						<br> <a href="{%url 'av'%}" style="text-decoration:None;color:yellow;"> Read the review </a>
+					</td>
+					<td>
+						<td>
+						<td style="background-color:black;color:white;text-align:center;font-style:bold;"> <img src="{%static 'images/dhoni.jpg' %}" height="200" width="250">
+						<br> <br> <span style="font-size:20px;text-align:left;color:006666;">Movie :</span> M.S DHONI <br>
+						<span style="font-size:20px;align:left;color:006666;">Cast :</span> Sushanth Singh Rajput,Kiara Advani,Disha Patani <br>
+						<span style="font-size:20px;align:left;color:006666;">Languages :</span> Hindi,Telugu,Tamil
+							<br> <a href="{% url 'msdhoni'%}" style="text-decoration:None;color:yellow;"> Read the review </a>
+						</td>
+
+				</tr>
+			</table>
+			<br>
+			<br>
+			<br>
+			<table>
+				<tr> 
+					
+					<td>
+					<td>
+					<td style="background-color:black;color:white;text-align:center;font-style:bold;"> <img src="{%static 'images/kabali.png'%}" height="200" width="250">
+					<br> <br> <span style="font-size:20px;align:left;color:006666;">Movie :</span> KABALI <br>
+					<span style="font-size:20px;align:left;color:006666;">Cast :</span>  Rajinikanth, Radhika Apte,Dhansika <br>
+					<span style="font-size:20px;align:left;color:006666;">Languages :</span> Tamil,Telugu,Hindi
+						<br> <a href="{% url 'kabali'%}" style="text-decoration:None;color:yellow;"> Read the review </a>
+					</td>
+					<td>
+					<td>
+					<td>
+					<td>
+					<td style="background-color:black;color:white;text-align:center;font-style:bold;"> <img src="{%static 'images/robo2.jpg'%}" height="200" width="200">
+					<br> <br> <span style="font-size:20px;align:left;color:006666;">Movie :</span> 2.0 <br>
+					<span style="font-size:20px;align:left;color:006666;">Cast:</span> Rajinikanth,Amy Jackson <br>
+					<span style="font-size:20px;align:left;color:006666;">Language :</span> Tamil,Hindi,Telugu
+						<br> <a href="#" style="text-decoration:None;color:yellow;"> Read the review </a> 
+					</td>
+					<td>
+					<td>
+					<td>
+					<td>
+					<td style="background-color:black;color:white;text-align:center;font-style:bold;"> <img src="{%static 'images/m4.jpg'%}" height="200" width="200">
+					<br> <br> <span style="font-size:20px;align:left;color:006666;">Movie :</span> GULLY BOY <br>
+					<span style="font-size:20px;align:left;color:006666;">Cast :</span> Ranveer Singh,AliaBhatt <br>
+					<span style="font-size:20px;align:left;color:006666;">Language :</span> Hindi
+						<br> <a href="{% url 'gully'%}" style="text-decoration:None;color:yellow;"> Read the review </a>
+					</td>
+					<td>
+					<td>
+					<td>
+					<td>
+					<td style="background-color:black;color:white;text-align:center;font-style:bold;"> <img src="{%static 'images/m1.jpg'%}" height="200" width="200">
+					<br> <br> <span style="font-size:20px;align:left;color:006666;">Movie :</span> VAKEELSAB <br>
+					<span style="font-size:20px;align:left;color:006666;">Cast :</span> PavanKalyan,Anjali,Nivetha Thomas,Ananya <br>
+					<span style="font-size:20px;align:left;color:006666;">Language :</span> Telugu
+						<br> <a href="#" style="text-decoration:None;color:yellow;"> Read the review </a> 
+					</td>
+				</tr>
+			</table>
+
+			
+		</div>
+		<div class="f">
+				<p style="font-size:20px"> Connect Us Here<br>
+				<a href="http://www.youtube.com" target="_blank"class="fa fa-youtube" ></a>
+				 <a href="http://www.facebook.com" class="fa fa-facebook" ></a>
+				 <a href="http://www.instagram.com" class="fa fa-instagram" ></a><p>
+				<h3> &copy All the reviews are subject to copyright </h3>
+			</div>
+	</body>
+</html>
